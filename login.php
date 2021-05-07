@@ -26,10 +26,6 @@ if(isset($_SESSION['cliente'])){
 		echo "<script>window.alert('Usuario no enontrado, verifique los datos');</script>";
 	}
 }
-//$r = Controlador::ic();
-//print_r ($r);
-//echo '<br>';
-//echo $r;
 ?>
 <!DOCTYPE html>
 <html lang="es-MX">
@@ -40,7 +36,7 @@ if(isset($_SESSION['cliente'])){
 		<title>Login</title>
 		<link rel="stylesheet" href="log.css">
 		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" type="text/css" href="../icon/styles.css">
+		<link href="https://file.myfontastic.com/DUtdwFq5TpfuCWokLrh8nW/icons.css" rel="stylesheet">
 	</head>
 	<body>
 		<header id="header" class="sticky">
