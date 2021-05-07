@@ -34,7 +34,7 @@ if(isset($_SESSION['cliente'])){
 		<title>Singup</title>
 		<link rel="stylesheet" href="log.css">
 		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" type="text/css" href="../icon/styles.css">
+		<link href="https://file.myfontastic.com/DUtdwFq5TpfuCWokLrh8nW/icons.css" rel="stylesheet">
 	</head>
 	<body>
 		<header id="header" class="sticky">
