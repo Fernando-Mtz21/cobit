@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Lato&family=Neuton:wght@200&family=Open+Sans&family=Poppins:wght@400&family=Roboto&display=swap');
+:root
+{
+	--principal: #DE1A1A;
+	--footer: #111;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 1000px;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.6s;
+}
+header.sticky
+{
+    padding: 5px 100px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+header .logo
+{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: 0.6s;
+}
+header.sticky .logo,
+header.sticky ul li a
+{
+    color: #000;
+}
+header .logo span,
+header ul li a:hover
+{
+	color: var(--principal);
+}
+.menuToggle
+{
+	display: none;
+}
+.current
+{
+	color: var(--principal) !important;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2020/03/26/16/11/corona-4970836_960_720.jpg'); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h2
+{
+    color: #fff;
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+}
+.banner h2 span
+{
+    color: var(--principal);
+}
+.sec
+{
+    background: #fff;
+    padding: 50px 100px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .content
+{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.mxw800p
+{
+    max-height: 800px;
+    margin: 0 auto;
+}
+.mxw800p p
+{
+	font-size: 20px;
+}
+h3
+{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+p
+{
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.btn
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--principal);
+    text-decoration: none;
+    color: #fff;
+}
+.services
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.services .box
+{
+    width: 350px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+.services .box .iconBx
+{
+    margin-top: 25px;
+}
+.services .box .iconBx span
+{
+    font-size: 70px; /*max-width: 70px si en lugar de span sea img*/
+    margin-bottom: 15px;
+	color: var(--principal);
+}
+.services .box h2
+{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.stats
+{
+    background: url('https://cdn.pixabay.com/photo/2020/03/31/14/04/covid-19-4987797_960_720.jpg');
+    padding-top: 250px;
+    margin-top: -250px;
+	background-size: cover;
+}
+.stats h3,
+.stats p
+{
+    color: #fff;
+}
+.statsBox
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.statsBox h2
+{
+    color: #fff;
+    font-size: 36px;
+}
+.statsBox h4
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.workBx
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.workBx .brand
+{
+    position: relative;
+    background: #4978ff;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workBx .brand:hover
+{
+    background: #000;
+}
+.workBx .brand a
+{
+    text-decoration: none;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.workBx .brand:hover a
+{
+    color: rgba(255,255,255,1);
+}
+.apartado
+{
+	position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	text-align: justify;
+    padding: 100px 50px -10px 50px;
+}
+.apartado img
+{
+	max-width: 350px;
+}
+.apartado h2
+{
+	font-size: 2em;
+    text-transform: uppercase;
+	margin: 30px;
+}
+.apartado p
+{
+	font-size: 18px;
+	margin: 30px;
+}
+.apartado a
+{
+	display: inline-block;
+    padding: 8px 10px;
+	border-radius: 5%;
+    text-decoration: none;
+    font-size: 18px;
+    background: var(--principal);
+    color: #fff;
+    margin: 20px;
+}
+.teamBx
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.teamBx .member
+{
+    position: relative;
+    background: #000;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teamBx .member .imgBx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.teamBx .member .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.teamBx .member .details
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: 0.2s;
+    opacity: 0;
+}
+.teamBx .member:hover .details
+{
+    opacity: 0.6;
+}
+.teamBx .member .details h2
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.teamBx .member .details h2 span
+{
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+}
+footer
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: var(--footer);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container1
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container1 .sec1
+{
+    margin-right: 30px;
+}
+footer .container1 .sec1.aboutus
+{
+    width: 40%;
+}
+footer .container1 h2
+{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .container1 h2:before
+{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--principal);
+}
+footer p
+{
+    color: #999;
+}
+.sci
+{
+    margin-top: 20px;
+    display: flex;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.sci li a:hover
+{
+    background: var(--principal);
+}
+.sci li a i
+{
+    color: #fff;
+    font-size: 20px;
+}
+.quickLinks
+{
+    position: relative;
+    width: 25%;
+}
+.quickLinks ul li
+{
+    list-style: none;
+}
+.quickLinks ul li a
+{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quickLinks ul li a.here
+{
+    color: #fff;
+}
+.quickLinks ul li a:hover
+{
+    color: #fff;
+}
+.contact
+{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contact .info
+{
+    position: relative;
+}
+.contact .info li
+{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1)
+{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span
+{
+    color: #999;
+}
+.contact .info li a
+{
+    color: #999;
+    text-decoration: none;
+}
+.contact .info li a:hover
+{
+    color: #fff;
+}
+.copyrightText
+{
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
+@media (max-width: 768px)
+{
+    footer
+    {
+        padding: 40x;
+    }
+    footer .contaner1
+    {
+        flex-direction: column;
+    }
+    footer .container1 .sec1
+    {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .container1 .sec1.aboutus,
+    .quickLinks,
+    .contact
+    {
+        width: 100%;
+    }
+    .copyrigthText
+    {
+        padding: 8px 40px;
+    }
+}
+@media (max-width: 992px)
+{
+	.menuToggle
+	{
+		display: block;
+		position: relative;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		justify-content: center;
+		align-items: center;
+		font-size: 30px;
+		color: #333;
+	}
+    header,
+    header.sticky
+    {
+        padding: 10px 20px;
+        background: #fff;
+    }
+    header ul
+    {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+    header.active ul
+    {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 20px;
+    }
+    header.active ul li a
+    {
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    header .logo,
+    header ul li a
+    {
+        color: #000;
+    }
+    .banner
+    {
+        background-position: center;
+    }
+    .banner h2
+    {
+        font-size: 60px;
+        padding: 0 50px;
+    }
+    .sec
+    {
+        padding: 100px 50px 50px 50px;
+    }
+    .services .box
+    {
+        width: 100%;
+    }
+    .stats
+    {
+        padding-top: 250px;
+    }
+	.apartado
+	{
+		padding: 100px 50px 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+	}
+	.apartado img
+	{
+		margin: 60px 0 0;
+        max-width: 100%;
+	}
+    .row100
+    {
+        flex-direction: column;
+    }
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100
+    {
+        width: 100%;
+        margin: 0;
+    }
+    .sci
+    {
+        margin: 20px;
+    }
+    .sci ul li a span /*Originalmente img en lugar de span*/
+    {
+        font-size: 24px;
+    }
+    h3
+    {
+        font-size: 36px;
+    }
+}
+/*Poner imagen Imagen de <a href="https://pixabay.com/es/users/fernandozhiminaicela-6246704/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5073811">fernando zhiminaicela</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5073811">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/jewhisperer-15825838/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4987797">Elliot Alderson</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4987797">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/ornaw-8155178/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4970836">Orna Wachman</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4970836">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/v-3-5-n-a-13670757/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4962034">v-3-5-N-a</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4962034">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/saniusman89-8519787/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5997511">Usman Yousaf</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5997511">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/voltamax-60363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Yerson Retamal</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2141808">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/mohamed_hassan-5229782/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4071274">mohamed Hassan</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4071274">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/piro4d-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4937553">PIRO4D</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4937553">Pixabay</a>
+	Imagen de <a href="https://pixabay.com/es/users/darkostojanovic-638422/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=563427">Darko Stojanovic</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=563427">Pixabay</a>*/

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>Test COVID-19</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://file.myfontastic.com/DUtdwFq5TpfuCWokLrh8nW/icons.css" rel="stylesheet">
+		<style>body{ background: linen; min-height: 300px !important; } fieldset{ margin: 2em 0; padding: 1em 2em; border: solid 1px #ccc; border-radius: 6px; min-width: 200px; font-size: 1.25em; } legend{ font-size: 1.20em; padding: 0 .25em;} .container-all{ width: 100%; max-width: 1000px; margin: auto; margin-top: 70px; display: flex; overflow: hidden; justify-content: center; margin-bottom: 70px; } .ctn-form{ width: 80%; padding: 40px; background: white; border: 1px solid #DE1A1A; } button{ width: 100%; height: 50px; margin-top: 60px; color: white; border: 0px; background: #DE1A1A; font-weight: 300; cursor: pointer; font-size: 18px; } .title{ text-align: center; font-weight: 300; } .rojo{ color: #DE1A1A; } .text a{ color: #029ee1; font-weight: 500; text-decoration: none; }</style>
+	</head>
+	<body>
+		<header id="header" class="sticky">
+			<a href="index.html" class="logo">Co<span>bit</span>19</a>
+			<div class="icon-menu menuToggle" id="menu" onclick="toggle();"></div>
+			<ul class="navigation">
+				<li><a href="index.html#inicio" onclick="toggle();" id="nav_inicio">Inicio</a></li>
+				<li><a href="index.html#informacion" onclick="toggle();" id="nav_informacion">Informaci&oacute;n</a></li>
+				<li><a href="index.html#servicios" onclick="toggle();" id="nav_servicios">Servicios</a></li>
+				<li><a href="index.html#sobremi" onclick="toggle();" id="nav_sobremi">Sobre m&iacute;</a></li>
+				<li><a href="test-covid.html" onclick="toggle();" class="current">Test Covid-19</a></li>
+			</ul>
+		</header>
+    	<div class="container-all">
+			<div class="ctn-form">
+				<h1 class="title">Test Covid-19</h1>
+				<form name="test" method="post" id="form">
+					<fieldset>
+						<legend>En los &uacute;ltimos 7 d&iacute;as, ¿Ha frecuentado lugares concurridos?</legend>
+						<input type="radio" id="salida_si" name="salida" value=5 required>
+						<label for="salida_si">Si</label><br>
+
+						<input type="radio" id="salida_no" name="salida" value=0 required>
+						<label for="salida_no">No</label>
+					</fieldset>
+					
+					<fieldset>
+						<legend>¿Ha estado en contacto con un caso sospechoso o confirmado de COVID-19?</legend>
+						<input type="radio" id="contacto_si" name="contacto" value=5 required>
+						<label for="contacto_si">Si</label><br>
+
+						<input type="radio" id="contacto_no" name="contacto" value=0 required>
+						<label for="contacto_no">No</label>
+					</fieldset>
+						
+					<fieldset>
+						<legend>Marque si ha padecido alguno de los siguientes síntomas recientemente&#58;</legend>
+						<input type="checkbox" id="fiebre" name="sintomas" value=5>
+						<label for="fiebre">Fiebre</label><br>
+
+						<input type="checkbox" id="cansancio" name="sintomas" value=5>
+						<label for="cansancio">Cansancio</label><br>
+
+						<input type="checkbox" id="tos" name="sintomas" value=5>
+						<label for="tos">Tos seca</label><br>
+
+						<input type="checkbox" id="dolores" name="sintomas" value=5>
+						<label for="dolores">Dolores</label><br>
+
+						<input type="checkbox" id="escurrimiento" name="sintomas" value=5>
+						<label for="escurrimiento">Escurrimiento y congesti&oacute;n nasal</label><br>
+
+						<input type="checkbox" id="garganta" name="sintomas" value=5>
+						<label for="garganta">Dolor de garganta</label><br>
+
+						<input type="checkbox" id="diarrea" name="sintomas" value=5>
+						<label for="diarrea">Diarrea</label><br>
+
+						<input type="checkbox" id="sin_sint" name="sintomas" value=0>
+						<label for="sin_sint">Ninguno</label>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Indique su rango de edad&#58;</legend>
+						<input type="radio" id="0-11" name="edad" value=1 required>
+						<label for="0-11">De 0 a 11 a&ntilde;os</label><br>
+
+						<input type="radio" id="12-26" name="edad" value=3 required>
+						<label for="12-26">De 12 a 26 a&ntilde;os</label><br>
+
+						<input type="radio" id="27-59" name="edad" value=5 required>
+						<label for="27-59">De 27 a 59 a&ntilde;os</label><br>
+
+						<input type="radio" id="60" name="edad" value=8 required>
+						<label for="60">60 a&ntilde;os o m&aacute;s</label>
+					</fieldset>
+
+					<fieldset>
+						<legend>Indique si ya se ha le han aplicado alguna vacuna contra la COVID-19&#58;</legend>
+						<input type="radio" id="vacuna_si" name="vacuna" value=0 required>
+						<label for="vacuna_si">Si</label><br>
+
+						<input type="radio" id="vacuna_no" name="vacuna" value=5 required>
+						<label for="vacuna_no">No</label><br>
+					</fieldset>
+					
+					<fieldset>
+						<legend>¿Con qu&eacute; frecuencia lava sus manos y desinfecta sus artículos, ropa, alimentos, etc&eacute;tera, cuando regresa a su casa?</legend>
+						<input type="radio" id="higiene_baja" name="higiene" value=7 required>
+							<label for="higiene_baja">Baja</label><br>
+
+							<input type="radio" id="higiene_media" name="higiene" value=5 required>
+							<label for="higiene_media">Media</label><br>
+
+							<input type="radio" id="higiene_alta" name="higiene" value=3 required>
+							<label for="higiene_alta">Alta</label><br>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Seleccione las casillas si padece de alguna de las siguientes condiciones&#58;</legend>
+						<input type="checkbox" id="hipertension" name="enfermedades" value=5>
+						<label for="hipertension">Hipertensi&oacute;n</label><br>
+
+						<input type="checkbox" id="diabetes" name="enfermedades" value=5>
+						<label for="diabetes">Diabetes</label><br>
+
+						<input type="checkbox" id="pulmon" name="enfermedades" value=5>
+						<label for="pulmon">Enfermedad Pulmonar Obstructiva Cr&oacute;nica </label><br>
+
+						<input type="checkbox" id="renal" name="enfermedades" value=5>
+						<label for="renal">Enfermedad Renal Cr&oacute;nica</label><br>
+
+						<input type="checkbox" id="ninguna" name="enfermedades" value=0>
+						<label for="ninguna">Ninguna</label>
+					</fieldset>
+					
+					<fieldset>
+						<legend>¿Hay m&aacute;s personas viviendo con usted?</legend>
+						<input type="radio" id="gente_si" name="gente" value=7 required>
+						<label for="gente_si">Si</label><br>
+
+						<input type="radio" id="gente_no" name="gente" value=3 required>
+						<label for="gente_no">No</label>
+					</fieldset>
+					
+					<fieldset>
+						<legend>¿Tiene m&eacute;dico familiar o seguro cl&iacute;nico?</legend>
+						<input type="radio" id="seguro_si" name="seguro" value=2 required>
+						<label for="seguro_si">Si</label><br>
+
+						<input type="radio" id="seguro_no" name="seguro" value=5 required>
+						<label for="seguro_no">No</label>
+					</fieldset>
+					
+					<fieldset>
+						<legend>¿Te has hecho la prueba de COVID-19?</legend>
+						<input type="radio" id="prueba_si" name="prueba" value=0 required>
+					<label for="prueba_si">Si</label><br>
+
+					<input type="radio" id="prueba_no" name="prueba" value=5 required>
+					<label for="prueba_no">No</label><br>
+					</fieldset>
+
+					<button onclick="test_covid();">Enviar resultados</button>
+				</form>
+			</div>
+		</div>
+			
+		<footer>
+		   <div class="container1">
+			   <div class="sec1 aboutus">
+				   <h2>S&iacute;gueme</h2>
+				   <p><i>"El buen medico trata la enfermedad; el gran medico trata al paciente que tiene la enfermedad"</i><br>- William Osler</p>
+				   <ul class="sci">
+					   <li><a href="https://www.facebook.com/ConsultorioDrMaruri"><i class="icon-facebook"></i></a></li>
+				   </ul>
+			   </div>
+			   <div class="sec1 quickLinks">
+				   <h2>Enlaces</h2>
+				   <ul>
+					   <li><a href="http://127.0.0.1:5000/">Chat-Bot</a></li>
+					   <li><a href="RA.html">Realidad Aumentada</a></li>
+					   <li><a href="login.php">Agendar Cita</a></li>
+					   <li><a href="test-covid.html" class="here">Test Covid-19</a></li>
+				   </ul>
+			   </div>
+			   <div class="sec1 contact">
+				   <h2>Informaci&oacute;n de Contacto</h2>
+				   <ul class="info">
+					   <li>
+						   <span><i class="icon-map-marker"></i></span>
+						   <span>Av. Cordillera de los Andes 1516 L-3,<br> Col. Pase de los Andes, San Nicolás de los Garza, Nuevo León, México</span>
+					   </li>
+					   <li>
+						   <span><i class="icon-phone"></i></span>
+						   <p><a href="tel:83837834">83-83-78-34</a></p>
+					   </li>
+					   <li>
+						   <span><i class="icon-envelope"></i></span>
+						   <p><a href="mailto:drfidelmaruri@hotmail.com">drfidelmaruri@hotmail.com</a></p>
+					   </li>
+				   </ul>
+			   </div>
+		   </div>
+	</footer>
+	<div class="copyrightText">
+		<p>Copyright &copy; 2021 <strong>Cobit19</strong>. Todos los derechos reservados.</p>
+	</div>
+				
+		<script type="text/javascript">
+			function test_covid(){
+				var i;
+				var acum = 0;
+				var salida = document.getElementsByName("salida");
+				var contacto = document.getElementsByName("contacto");
+				var sintomas = document.getElementsByName("sintomas");
+				var edad = document.getElementsByName("edad");
+				var vacuna = document.getElementsByName("vacuna");
+				var higiene = document.getElementsByName("higiene");
+				var enfermedades = document.getElementsByName("enfermedades");
+				var gente = document.getElementsByName("gente");
+				var seguro = document.getElementsByName("seguro");
+				var prueba = document.getElementsByName("prueba");
+				for(i = 0; i < salida.length; i++){
+					if(salida[i].checked == true){
+						acum = acum + parseInt(salida[i].value);
+						break;
+					}
+				}
+				for(i = 0; i < contacto.length; i++){
+					if(contacto[i].checked == true){
+						acum = acum + parseInt(contacto[i].value);
+						break;
+					}
+				}
+				for(i = 0; i < sintomas.length; i++){
+					if(sintomas[i].checked == true){
+						acum = acum + parseInt(sintomas[i].value);
+					}
+				}
+				for(i = 0; i < edad.length; i++){
+					if(edad[i].checked == true){
+						acum = acum + parseInt(edad[i].value);
+						break;
+					}
+				}
+				for(i = 0; i < vacuna.length; i++){
+					if(vacuna[i].checked == true){
+						acum = acum + parseInt(vacuna[i].value);
+						break;
+					}
+				}
+				for(i = 0; i < higiene.length; i++){
+					if(higiene[i].checked == true){
+						acum = acum + parseInt(higiene[i].value);
+						break;
+					}
+				}
+				for(i = 0; i < enfermedades.length; i++){
+					if(enfermedades[i].checked == true){
+						acum = acum + parseInt(enfermedades[i].value);
+					}
+				}
+				for(i = 0; i < gente.length; i++){
+					if(gente[i].checked == true){
+						acum = acum + parseInt(gente[i].value);
+						break;
+					}
+				}
+				for(i = 0; i < seguro.length; i++){
+					if(seguro[i].checked == true){
+						acum = acum + parseInt(seguro[i].value);
+						break;
+					}
+				}
+				for(i = 0; i < prueba.length; i++){
+					if(prueba[i].checked == true){
+						acum = acum + parseInt(prueba[i].value);
+						break;
+					}
+				}
+				if(acum > 35){
+					document.getElementById("form").innerHTML = "";
+					document.getElementById("form").innerHTML = "<center><h1>Resultado de la prueba: </h1><h2><span class='rojo'>Se detectaron signos de alarma</span></h2><h2 class='text'><a href='login.php'>Agendar una cita</a></h2></center>";
+				}else{
+					document.getElementById("form").innerHTML = "";
+					document.getElementById("form").innerHTML = "<p><center><h1>Resultado de la prueba: </h1><h2><span class='rojo'>No se detectan signos de alarma</span></h2><h2 class='text'><a href='index.html'>Volver a la p&aacute;gina principal</a></h2></center></p>";
+				}
+			}
+			
+			var t = 0;
+			function toggle(){
+				var header = document.querySelector("header");
+				var menu = document.getElementById("menu");
+				menu.classList.toggle("active");
+				header.classList.toggle("active");
+				if(t == 0){
+					menu.classList.remove("icon-menu");
+					menu.classList.add("icon-times");
+					t = 1;
+				}else{
+					menu.classList.remove("icon-times");
+					menu.classList.add("icon-menu");
+					t = 0;
+				}
+			}
+			
+		</script>
+	</body>
+</html>
